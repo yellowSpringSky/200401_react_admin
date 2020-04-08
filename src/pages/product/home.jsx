@@ -115,8 +115,12 @@ export default class ProductHome extends Component {
         )
         return (
             <Card title={title} extra={extra}>
-                <Table bordered rowKey='_id' loading={loading} 
-                    dataSource={products} columns={this.columns}
+                <Table 
+                    bordered 
+                    rowKey='_id' 
+                    loading={loading} 
+                    dataSource={products} 
+                    columns={this.columns}
                     pagination={{
                         current: this.pageNum,
                         total, 

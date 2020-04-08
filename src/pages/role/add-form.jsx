@@ -25,7 +25,7 @@ export default class AddForm extends Component {
         return (
             <Form ref={this.form} {...formItemLayout} initialValues={{roleName: ''}}>
                 <Item label='角色名称' name='roleName' rules={[
-                    {required: true, message: '角色名称必须输入'}    
+                    {required: true, whitespace: true, message: '角色名称必须输入'}    
                 ]}>
                     <Input placeholder='请输入角色名称' />
                 </Item>

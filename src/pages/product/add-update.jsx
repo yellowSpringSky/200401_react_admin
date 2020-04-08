@@ -1,7 +1,7 @@
 /*
     商品的添加/更新子路由组件
 */
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import {Card, Form, Input, Button, Cascader, message} from 'antd'
 import {ArrowLeftOutlined} from '@ant-design/icons'
 import LinkButton from '../../components/link-button'
@@ -12,7 +12,7 @@ import RichTextEditor from './rich-text-editor'
 const {Item} = Form
 const {TextArea} = Input
 
-export default class ProductAddUpdate extends Component {
+export default class ProductAddUpdate extends PureComponent {
     state = {
         options: []
     }

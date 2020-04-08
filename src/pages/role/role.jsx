@@ -69,10 +69,10 @@ export default class Role extends Component {
      * 添加角色
      */
     addRole = async () => {
-        // 隐藏确认框
-        this.setState({isShowAdd: false})
         // 收集数据
         const values = await this.form.current.validateFields()
+        // 隐藏确认框
+        this.setState({isShowAdd: false})
         const {roleName} = values
 
         const result = await reqAddRole(roleName)
@@ -108,7 +108,7 @@ export default class Role extends Component {
                 memoryUtils.user = {}
                 storageUtils.removeUser()
                 this.props.history.replace('/login')
-                message.success('设置角色权限成功')
+                message.warning('当前用角色权限修改了，请退出重新登录')
             } else {
                 message.success('设置角色权限成功')
                 this.setState({

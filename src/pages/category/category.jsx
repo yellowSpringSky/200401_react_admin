@@ -123,10 +123,10 @@ export default class Category extends Component {
         添加分类
     */
     addCategory = async () => {
+        // 收集数据
         const values = await this.addForm.current.validateFields()
         // 1、隐藏确认框
         this.setState({showStatus: 0})
-        // 收集数据
         const {parentId, categoryName} = values
         // 清除输入数据
         this.form.current.resetFields()

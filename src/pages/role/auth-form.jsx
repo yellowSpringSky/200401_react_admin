@@ -2,7 +2,7 @@
  * 更新角色权限form组件
  */
 
-import React, {Component} from 'react'
+import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
 import {Form, Input, Tree} from 'antd'
 import menuList from '../../config/menuConfig'
@@ -10,7 +10,7 @@ import menuList from '../../config/menuConfig'
 const Item = Form.Item
 const {TreeNode} = Tree
 
-export default class AuthForm extends Component {
+export default class AuthForm extends PureComponent {
     static propTyes = {
         role: PropTypes.object
     }
